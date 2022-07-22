@@ -36,7 +36,7 @@ export default function Home() {
             web programming services such as <b>{text}.</b>
           </p>
           <p class="lead">
-            <a href="#" class="btn btn-lg btn-primary fw-bold border-white">
+            <a href="https://twitter.com/danprogcomms" target='_blank' class="btn btn-lg btn-primary fw-bold border-white">
               Learn more
             </a>
           </p>
