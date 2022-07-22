@@ -12,9 +12,22 @@ import eight from "../assets/8.png"
 import nine from "../assets/9.jfif"
 import ten from "../assets/10.jfif"
 import eleven from "../assets/11.jfif"
+import { useEffect, useState } from "react";
 
 export default function Proof() {
-  
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const userProofs = [
     {
       id: 1,
@@ -88,7 +101,7 @@ export default function Proof() {
 
       <div class="album py-5">
         <div class="container">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
             {userProofs.map((item) =>(
               <div class="col" key={item.id}>
               <div class="card shadow-sm">
@@ -105,6 +118,7 @@ export default function Proof() {
           </div>
         </div>
       </div>
+      <div class={scrollPosition > 1300 ? "sticky-bottom" : "d-none"}><a href="#proofs" className="btn btn-primary my-4 mx-4">Back to top</a></div>
     </>
   );
 }

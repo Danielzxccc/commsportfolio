@@ -17,10 +17,25 @@ export default function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    const calculatePos = () =>{
+    if(scrollPosition > 800){
+        setNav("Proofs");
+      }else{
+        setNav("Home")
+      }
+    }
+  
+    return () => {
+      calculatePos();
+    }
+  }, [scrollPosition])
+  
+
   return (
     <div className={scrollPosition < 1200 ? 'container sticky-top': 'container'}>
       <header className="d-flex justify-content-between py-3 align-items-center">
-        <h1>DAN {nav === "Home" ? "" : nav}</h1>
+        <h1>DAN</h1>
         <ul className="nav nav-pills">
           <li className="nav-item">
             <a
