@@ -118,7 +118,7 @@ export default function Proof() {
           </div>
         </div>
       </div>
-      <div class={scrollPosition > 2500 ? "sticky-bottom" : "d-none"}><a href="#proofs" className="btn btn-primary my-4 mx-4">Back to top</a></div>
+      <div class={scrollPosition > 2800 ? "sticky-bottom" : "d-none"}><a href="#proofs" className="btn btn-primary my-4 mx-4">Back to top</a></div>
     </>
   );
 }
