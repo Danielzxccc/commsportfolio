@@ -99,16 +99,16 @@ export default function Proof() {
         </div>
       </section>
 
-      <div class="album py-5">
-        <div class="container">
-          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
+      <div className="album py-5">
+        <div className="container">
+          <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
             {userProofs.map((item) =>(
-              <div class="col" key={item.id}>
-              <div class="card shadow-sm">
-                <img src={item.imgurl} alt="" className="card-img-top img-fluid" style={{height: 400}}/>
+              <div className="col" key={item.id}>
+              <div className="card shadow-sm">
+                <img src={item.imgurl} alt="" classNameName="card-img-top img-fluid" style={{height: 400}}/>
 
-                <div class="card-body bg-dark text-center">
-                  <p class="card-text">
+                <div className="card-body bg-dark text-center">
+                  <p className="card-text">
                     {item.desc}
                   </p>
                 </div>
@@ -118,7 +118,7 @@ export default function Proof() {
           </div>
         </div>
       </div>
-      <div class={scrollPosition > 1300 ? "sticky-bottom" : "d-none"}><a href="#proofs" className="btn btn-primary my-4 mx-4">Back to top</a></div>
+      <div class={scrollPosition > 2500 ? "sticky-bottom" : "d-none"}><a href="#proofs" className="btn btn-primary my-4 mx-4">Back to top</a></div>
     </>
   );
 }

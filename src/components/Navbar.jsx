@@ -18,23 +18,27 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    const calculatePos = () =>{
-    if(scrollPosition > 800){
+    const calculatePos = () => {
+      if (scrollPosition > 2000) {
         setNav("Proofs");
-      }else{
-        setNav("Home")
+      } else if (scrollPosition > 900) {
+        setNav("Services");
+      } else {
+        setNav("Home");
       }
-    }
-  
+    };
+
     return () => {
       calculatePos();
-    }
-  }, [scrollPosition])
-  
+    };
+  }, [scrollPosition]);
+  console.log(scrollPosition);
 
   return (
-    <div className={scrollPosition < 1200 ? 'container sticky-top': 'container'}>
-      <header className="d-flex justify-content-between py-3 align-items-center">
+    <div
+      className={scrollPosition < 2500 ? "container sticky-top" : "container"}
+    >
+      <header className="d-flex justify-content-between py-3 align-items-center bg-dark">
         <h1>DAN</h1>
         <ul className="nav nav-pills">
           <li className="nav-item">
@@ -50,6 +54,17 @@ export default function Navbar() {
           </li>
           <li className="nav-item">
             <a
+              href="#services"
+              className={nav === "Services" ? "nav-link active" : "nav-link"}
+              onClick={() => {
+                setNav("Services");
+              }}
+            >
+              Services
+            </a>
+          </li>
+          <li className="nav-item">
+            <a
               href="#proofs"
               className={nav === "Proofs" ? "nav-link active" : "nav-link"}
               onClick={() => {
@@ -57,17 +72,6 @@ export default function Navbar() {
               }}
             >
               Proofs
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              href="#"
-              className={nav === "Services" ? "nav-link active" : "nav-link"}
-              onClick={() => {
-                setNav("Services");
-              }}
-            >
-              Services
             </a>
           </li>
         </ul>
