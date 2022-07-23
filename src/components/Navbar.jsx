@@ -36,7 +36,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={scrollPosition < 2500 ? "container sticky-top" : "container"}
+      className={scrollPosition < 3300 ? "container sticky-top" : "container"}
     >
       <header className="d-flex justify-content-between py-3 align-items-center bg-dark">
         <h1>DAN</h1>
