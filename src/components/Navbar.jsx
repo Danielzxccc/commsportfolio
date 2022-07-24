@@ -32,7 +32,6 @@ export default function Navbar() {
       calculatePos();
     };
   }, [scrollPosition]);
-  console.log(scrollPosition);
 
   return (
     <div
