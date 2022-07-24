@@ -104,7 +104,7 @@ export default function Services() {
     },
   ];
   const [category, setCategory] = useState("");
-  console.log(category);
+
   return (
     <>
       <section className="py-5 text-center container" id="services">
