@@ -101,7 +101,7 @@ export default function Proof() {
 
       <div className="album py-5">
         <div className="container">
-          <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
+          <div className="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 g-3">
             {userProofs.map((item) =>(
               <div className="col" key={item.id}>
               <div className="card shadow-sm">
