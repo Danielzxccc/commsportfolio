@@ -172,10 +172,10 @@ export default function Services() {
                 .filter((cat) => cat.category.includes(category))
                 .map((item) => (
                   <motion.div
-                    animate={{ opacity: 1 }}
-                    initial={{ opacity: 0 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.8 }}
+                    animate={{ x: 0 }}
+                    initial={{ x: '-100vw' }}
+                    exit={{ y: '100vh' }}
+                    transition={{ duration: 1 }}
                     className="col"
                     key={item.id}
                   >
