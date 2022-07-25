@@ -19,7 +19,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const calculatePos = () => {
-      if (scrollPosition > 2000) {
+      if (scrollPosition > 1700) {
         setNav("Proofs");
       } else if (scrollPosition > 900) {
         setNav("Services");
