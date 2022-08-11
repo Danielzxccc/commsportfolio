@@ -37,7 +37,7 @@ export default function Navbar() {
     <div
       className={scrollPosition < 3500 ? "container sticky-top" : "container"}
     >
-      <header className="d-flex justify-content-between py-3 align-items-center bg-dark">
+      <header className="d-flex justify-content-between py-3 align-items-center">
         <h1>DAN</h1>
         <ul className="nav nav-pills">
           <li className="nav-item">

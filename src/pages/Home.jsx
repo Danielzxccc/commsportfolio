@@ -29,11 +29,11 @@ export default function Home() {
           style={{ width: 270 }}
         />
         <div className="px-4 text-center">
-          <h1>Dan Web Developer</h1>
+          <h1>Dan IT COMMISSIONER</h1>
           <h3>@danprogcomms</h3>
           <p className="lead">
             Hi I'm Dan from #commstwt. Welcome to my website. <br /> I offer
-            web programming services such as <b>{text}.</b>
+            programming services such as <b>{text}.</b>
           </p>
           <p class="lead">
             <a href="https://twitter.com/danprogcomms" target='_blank' class="btn btn-lg btn-primary fw-bold border-white">
