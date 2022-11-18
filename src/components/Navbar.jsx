@@ -1,73 +1,73 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react'
 
 export default function Navbar() {
-  const [nav, setNav] = useState("Home");
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [nav, setNav] = useState('Home')
+  const [scrollPosition, setScrollPosition] = useState(0)
 
   const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-  };
+    const position = window.pageYOffset
+    setScrollPosition(position)
+  }
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll)
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   useEffect(() => {
     const calculatePos = () => {
       if (scrollPosition > 1700) {
-        setNav("Proofs");
+        setNav('Proofs')
       } else if (scrollPosition > 900) {
-        setNav("Services");
+        setNav('Services')
       } else {
-        setNav("Home");
+        setNav('Home')
       }
-    };
+    }
 
     return () => {
-      calculatePos();
-    };
-  }, [scrollPosition]);
+      calculatePos()
+    }
+  }, [scrollPosition])
 
   return (
     <div
-      className={scrollPosition < 3500 ? "container sticky-top" : "container"}
+      className={scrollPosition < 3500 ? 'container fixed-top' : 'container'}
     >
-      <header className="d-flex justify-content-between py-3 align-items-center">
+      <header className='d-flex justify-content-between py-3 align-items-center'>
         <h1>DAN</h1>
-        <ul className="nav nav-pills">
-          <li className="nav-item">
+        <ul className='nav nav-pills'>
+          <li className='nav-item'>
             <a
-              href="#"
-              className={nav === "Home" ? "nav-link active" : "nav-link"}
+              href='#'
+              className={nav === 'Home' ? 'nav-link active' : 'nav-link'}
               onClick={() => {
-                setNav("Home");
+                setNav('Home')
               }}
             >
               Home
             </a>
           </li>
-          <li className="nav-item">
+          <li className='nav-item'>
             <a
-              href="#services"
-              className={nav === "Services" ? "nav-link active" : "nav-link"}
+              href='#services'
+              className={nav === 'Services' ? 'nav-link active' : 'nav-link'}
               onClick={() => {
-                setNav("Services");
+                setNav('Services')
               }}
             >
               Services
             </a>
           </li>
-          <li className="nav-item">
+          <li className='nav-item'>
             <a
-              href="#proofs"
-              className={nav === "Proofs" ? "nav-link active" : "nav-link"}
+              href='#proofs'
+              className={nav === 'Proofs' ? 'nav-link active' : 'nav-link'}
               onClick={() => {
-                setNav("Proofs");
+                setNav('Proofs')
               }}
             >
               Proofs
@@ -76,5 +76,5 @@ export default function Navbar() {
         </ul>
       </header>
     </div>
-  );
+  )
 }
